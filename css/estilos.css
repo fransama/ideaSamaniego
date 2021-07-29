@@ -1,0 +1,172 @@
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 30px;
+  padding: 25px 0 25px 30px;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to top, black, grey); }
+  .header h1 {
+    margin-left: 10px; }
+  .header nav {
+    width: 60%;
+    margin-right: 10%; }
+    .header nav .nav-flex {
+      display: flex;
+      justify-content: space-between; }
+      .header nav .nav-flex li {
+        font-weight: bold;
+        font-family: 'Bebas Neue', regular;
+        font-size: 30px; }
+        .header nav .nav-flex li:hover {
+          border-bottom: 1px solid white; }
+
+.presentacion {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 480px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-family: 'Bebas Neue', regular;
+  font-size: 30px;
+  background-image: url(../media/imagen-fondo-principal.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 5%; }
+  .presentacion p {
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-top: 50px; }
+  footer ul {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    margin-left: 20px; }
+    footer ul li img {
+      border-radius: 40px; }
+    footer ul li a {
+      color: white; }
+
+.tituloVinilos {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 58px;
+  margin: 100px 0px 0px 70px; }
+
+.vinilos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-top: 50px; }
+  .vinilos div {
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+    padding: 5px; }
+    .vinilos div p {
+      margin-top: 10px;
+      font-weight: bold; }
+    .vinilos div:hover {
+      border: 2px solid white;
+      border-radius: 10px; }
+
+.tocadiscos-flex {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 60px; }
+  .tocadiscos-flex span {
+    text-align: center;
+    padding: 50px; }
+    .tocadiscos-flex span p {
+      margin-top: 20px; }
+
+.main {
+  display: flex;
+  margin-top: 10px; }
+  .main img {
+    margin: auto; }
+  .main div {
+    margin: auto;
+    width: 40%;
+    text-align: center; }
+    .main div h2 {
+      padding: 10px 0px; }
+    .main div p {
+      text-align: center;
+      width: 90%;
+      margin: auto; }
+
+.mapa {
+  display: flex;
+  margin: 50px; }
+  .mapa p {
+    width: 30%;
+    text-align: center;
+    margin: auto; }
+
+.formulario {
+  width: 80%;
+  margin: 30px auto;
+  border-radius: 10px;
+  border: 1px solid white; }
+  .formulario form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px; }
+    .formulario form .input-1 {
+      height: 40px;
+      width: 30%;
+      padding: 0 10px;
+      display: inline-flex;
+      margin-bottom: 5px;
+      color: white;
+      border-radius: 10px;
+      background-color: black;
+      border: 1px solid white;
+      font-size: 18px; }
+    .formulario form textarea {
+      padding: 10px;
+      margin-bottom: 3px;
+      display: inline-flex;
+      margin-bottom: 3px;
+      color: white;
+      border-radius: 10px;
+      background-color: black;
+      height: 100px;
+      border: 1px solid white;
+      font-size: 17px; }
+    .formulario form .boton {
+      height: 30px;
+      width: 80px;
+      margin-top: 10px;
+      border-radius: 10px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: white; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: white; }

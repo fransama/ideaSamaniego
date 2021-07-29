@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 50px;
+
+    ul {
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+        margin-left: 20px;
+
+        li {
+            img {
+                border-radius: 40px;
+            }
+            a{
+                color: white;
+            }
+        }
+    }
+}

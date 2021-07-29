@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 30px;
+    padding: 25px 0 25px 30px;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to top,$colorPrincipal,grey);
+
+    h1{
+        margin-left: 10px;
+    }
+
+    nav {
+        width: 60%;
+        margin-right: 10%;
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                font-weight: bold;
+                font-family: 'Bebas Neue', regular;
+                font-size: 30px;
+
+                &:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+}

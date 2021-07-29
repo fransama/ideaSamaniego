@@ -1,0 +1,21 @@
+.presentacion {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 480px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Bebas Neue', regular;
+    font-size: 30px;
+    background-image: url(../media/imagen-fondo-principal.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 5%;
+
+
+    p{
+        margin-top: 10px;
+        font-size: 25px;
+        font-family: 'Roboto', sans-serif;
+    }
+}

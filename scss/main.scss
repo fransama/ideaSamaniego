@@ -1,0 +1,43 @@
+//variables
+
+$colorPrincipal: black;
+
+
+//mixins
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+//import
+
+@import "header";
+@import "index";
+@import "footer";
+@import "page-vinilos";
+@import "page-tocadiscos";
+@import "page-sobreNosotros";
+@import "page-contacto";
+
+//estilos generales
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $colorPrincipal;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
