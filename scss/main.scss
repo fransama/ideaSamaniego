@@ -1,3 +1,12 @@
+//estilos generales
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 //variables
 
 $colorPrincipal: black;
@@ -20,12 +29,6 @@ $colorPrincipal: black;
 @import "page-sobreNosotros";
 @import "page-contacto";
 
-//estilos generales
-
-*{
-    margin: 0;
-    padding: 0;
-}
 
 body {
     font-family: 'Roboto', sans-serif;

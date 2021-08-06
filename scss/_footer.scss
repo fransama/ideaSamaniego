@@ -9,15 +9,39 @@ footer {
         display: flex;
         width: 20%;
         justify-content: space-between;
-        margin-left: 20px;
+        margin-left: 50px;
 
         li {
-            img {
-                border-radius: 40px;
-            }
+            font-size: 50px;
             a{
                 color: white;
             }
+        }
+    }
+}
+
+@media (max-width:950px){
+    footer {
+        flex-direction: column;
+        ul {
+            justify-content: center;
+            margin: auto;
+            width: 50%;
+            }
+            li {
+                margin:auto ;
+            }
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+
+
+@media (max-width:650px){
+    footer {
+        ul {
+            width: 80%;
         }
     }
 }

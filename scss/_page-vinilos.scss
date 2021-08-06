@@ -1,18 +1,18 @@
 .tituloVinilos {
     font-family: 'Bebas Neue', cursive;
     font-size: 58px;
-    margin: 100px 0px 0px 70px;
+    margin: 100px 0px 90px 70px;
 }
 
 .vinilos {
+    width: 99%;
     display: flex;
     flex-wrap: wrap;
     margin-left: 10px;
     margin-top: 50px;
 
     div {
-        width: 300px;
-        height: 250px;
+        @include sizes (23%, 30%);
         margin: 10px;
         text-align: center;
         padding: 5px;
@@ -25,6 +25,28 @@
         &:hover {
             border: 2px solid white;
             border-radius: 10px;
+        }
+    }
+}
+
+@media (max-width:1050px){
+    .vinilos{ 
+        margin: auto;
+
+        div {
+            width: 45%;
+        }
+    }
+}
+
+@media (max-width: 550px){
+    .vinilos {
+        margin: auto;
+        flex-direction: column;
+        div {
+            margin: auto;
+            margin-top: 10px;
+            @include sizes (90%, 30%)
         }
     }
 }
