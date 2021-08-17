@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
     @include sizes(100%, 80px);
@@ -9,6 +10,10 @@
 
     h1{
         margin-left: 10px;
+    }
+
+    .menu-abrir, .menu-cerrar {
+        display: none;
     }
 
     nav {
@@ -49,6 +54,45 @@
                     font-size: 25px;
                     font-weight: 20;
                 }
+            }
+        }
+    }
+}
+
+
+@media (max-width:750px) {
+
+    .header{
+        height: auto;
+        padding-left: 0;
+        flex-direction: row;
+
+        .menu-abrir {
+            margin-right:20px ;
+        }
+        
+        .menu-abrir, .menu-cerrar {
+            display: block;
+        }
+    
+        nav {
+            position: absolute;
+            top: -300%;
+            @include sizes (100%, auto);
+            background-color: $colorPrincipal;
+            transition: top .4s ease-out;
+            &:target {
+                top: 0%;
+            }
+
+            .nav-flex {
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            li {
+                color: white;
             }
         }
     }

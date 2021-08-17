@@ -30,6 +30,9 @@
 }
 
 @media (max-width:1050px){
+    .tituloVinilos {
+        margin:100px 0px 90px 20px ;
+    }
     .vinilos{ 
         margin: auto;
 
@@ -40,6 +43,9 @@
 }
 
 @media (max-width: 550px){
+    .tituloVinilos {
+        font-size: 45px;
+    }
     .vinilos {
         margin: auto;
         flex-direction: column;

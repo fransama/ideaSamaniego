@@ -19,3 +19,11 @@
         font-family: 'Roboto', sans-serif;
     }
 }
+
+@media (max-width:380px) {
+    .presentacion {
+        p {
+            font-size: 20px;
+        }
+    }
+}

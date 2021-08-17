@@ -3,7 +3,20 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: white; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
 .header {
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
   height: 80px;
@@ -14,6 +27,8 @@
   background: linear-gradient(to top, black, grey); }
   .header h1 {
     margin-left: 10px; }
+  .header .menu-abrir, .header .menu-cerrar {
+    display: none; }
   .header nav {
     width: 60%;
     margin-right: 10%; }
@@ -41,6 +56,31 @@
           font-size: 25px;
           font-weight: 20; } }
 
+@media (max-width: 750px) {
+  .header {
+    height: auto;
+    padding-left: 0;
+    flex-direction: row; }
+    .header .menu-abrir {
+      margin-right: 20px; }
+    .header .menu-abrir, .header .menu-cerrar {
+      display: block; }
+    .header nav {
+      position: absolute;
+      top: -300%;
+      height: auto;
+      width: 100%;
+      background-color: black;
+      transition: top .4s ease-out; }
+      .header nav:target {
+        top: 0%; }
+      .header nav .nav-flex {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center; }
+      .header nav li {
+        color: white; } }
+
 .presentacion {
   display: flex;
   flex-flow: column nowrap;
@@ -58,6 +98,10 @@
     margin-top: 10px;
     font-size: 25px;
     font-family: 'Roboto', sans-serif; }
+
+@media (max-width: 380px) {
+  .presentacion p {
+    font-size: 20px; } }
 
 footer {
   display: flex;
@@ -116,12 +160,16 @@ footer {
       border-radius: 10px; }
 
 @media (max-width: 1050px) {
+  .tituloVinilos {
+    margin: 100px 0px 90px 20px; }
   .vinilos {
     margin: auto; }
     .vinilos div {
       width: 45%; } }
 
 @media (max-width: 550px) {
+  .tituloVinilos {
+    font-size: 45px; }
   .vinilos {
     margin: auto;
     flex-direction: column; }
@@ -134,6 +182,7 @@ footer {
 .tocadiscos-flex {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 80%;
   padding: 5px;
   border: 2px solid white;
@@ -145,6 +194,34 @@ footer {
     padding: 50px; }
     .tocadiscos-flex span p {
       margin-top: 20px; }
+
+@media (max-width: 900px) {
+  .tocadiscos-flex {
+    flex-direction: column;
+    margin: auto; }
+    .tocadiscos-flex img {
+      height: 50%;
+      width: 50%; } }
+
+@media (max-width: 600px) {
+  .tituloVinilos {
+    font-size: 50px; }
+  .tocadiscos-flex {
+    margin: auto; }
+    .tocadiscos-flex span {
+      padding: 10px; }
+      .tocadiscos-flex span h2 {
+        font-size: 20px; }
+      .tocadiscos-flex span p {
+        font-size: 14px; } }
+
+@media (max-width: 400px) {
+  .tituloVinilos {
+    font-size: 40px; } }
+
+@media (max-width: 320px) {
+  .tituloVinilos {
+    font-size: 35px; } }
 
 .main {
   display: flex;
@@ -164,11 +241,39 @@ footer {
 
 .mapa {
   display: flex;
-  margin: 50px; }
+  margin: 50px;
+  height: 600px; }
   .mapa p {
     width: 30%;
     text-align: center;
-    margin: auto; }
+    margin: auto;
+    margin-left: 10px; }
+    .mapa p span {
+      font-weight: bold;
+      font-size: 25px; }
+
+@media (max-width: 950px) {
+  .main {
+    flex-direction: column; }
+    .main div {
+      width: 100%; }
+      .main div h2 {
+        font-size: 40px; }
+      .main div p {
+        margin-bottom: 10px; }
+  .mapa {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 50px 0 50px 0; }
+    .mapa iframe {
+      margin: auto; }
+    .mapa p {
+      height: auto;
+      width: 100%;
+      margin-bottom: 50px; }
+      .mapa p span {
+        font-weight: bold;
+        font-size: 25px; } }
 
 .formulario {
   width: 80%;
@@ -183,6 +288,7 @@ footer {
     .formulario form .input-1 {
       height: 40px;
       width: 30%;
+      min-width: 170px;
       padding: 0 10px;
       display: inline-flex;
       margin-bottom: 5px;
@@ -207,15 +313,3 @@ footer {
       width: 80px;
       margin-top: 10px;
       border-radius: 10px; }
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: black;
-  color: white; }
-
-li {
-  list-style: none; }
-
-a {
-  text-decoration: none;
-  color: white; }
