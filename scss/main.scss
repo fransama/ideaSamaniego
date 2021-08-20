@@ -1,7 +1,15 @@
+
 //variables
 
 $colorPrincipal: black;
 
+
+//mixins
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
 
 
 //estilos generales
@@ -13,9 +21,10 @@ $colorPrincipal: black;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
     background-color: $colorPrincipal;
     color: white;
+    font-family: 'Roboto', sans-serif;
+    @include sizes (100%,100vh);
 }
 
 li {
@@ -27,12 +36,6 @@ a {
     color: white;
 }
 
-//mixins
-
-@mixin sizes($width, $height) {
-    height: $height;
-    width: $width;
-}
 
 //import
 

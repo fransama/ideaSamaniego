@@ -4,9 +4,11 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Roboto', sans-serif;
   background-color: black;
-  color: white; }
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  width: 100%; }
 
 li {
   list-style: none; }
@@ -24,9 +26,10 @@ a {
   padding: 25px 0 25px 30px;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to top, black, grey); }
+  background-color: #4a4948; }
   .header h1 {
-    margin-left: 10px; }
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif; }
   .header .menu-abrir, .header .menu-cerrar {
     display: none; }
   .header nav {
@@ -70,7 +73,7 @@ a {
       top: -300%;
       height: auto;
       width: 100%;
-      background-color: black;
+      background-color: #4a4a4a;
       transition: top .4s ease-out; }
       .header nav:target {
         top: 0%; }
@@ -82,10 +85,10 @@ a {
         color: white; } }
 
 .presentacion {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  height: 480px;
-  justify-content: center;
   align-items: center;
   color: white;
   font-weight: bold;
@@ -94,6 +97,8 @@ a {
   background-image: url(../media/imagen-fondo-principal.jpg);
   background-repeat: no-repeat;
   background-position: 50% 5%; }
+  .presentacion h1 {
+    margin-top: 180px; }
   .presentacion p {
     margin-top: 10px;
     font-size: 25px;
@@ -108,7 +113,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   color: white;
-  margin-top: 50px; }
+  margin-top: 100px; }
   footer ul {
     display: flex;
     width: 20%;
@@ -128,6 +133,8 @@ footer {
       width: 50%; }
     footer li {
       margin: auto; }
+      footer li a {
+        font-size: 40px; }
   p {
     margin-top: 10px; } }
 
@@ -138,32 +145,34 @@ footer {
 .tituloVinilos {
   font-family: 'Bebas Neue', cursive;
   font-size: 58px;
-  margin: 100px 0px 90px 70px; }
+  margin: 80px 0px 90px 70px; }
 
 .vinilos {
+  height: 100vh;
   width: 99%;
   display: flex;
-  flex-wrap: wrap;
-  margin-left: 10px;
-  margin-top: 50px; }
+  flex-wrap: wrap; }
   .vinilos div {
-    height: 30%;
+    height: auto;
     width: 23%;
     margin: 10px;
     text-align: center;
-    padding: 5px; }
+    padding-top: 25px;
+    transition: all 0.25s; }
     .vinilos div p {
       margin-top: 10px;
       font-weight: bold; }
     .vinilos div:hover {
-      border: 2px solid white;
-      border-radius: 10px; }
+      transform: translateY(-15px);
+      border: 1px solid white;
+      border-radius: 5px; }
 
 @media (max-width: 1050px) {
   .tituloVinilos {
     margin: 100px 0px 90px 20px; }
   .vinilos {
-    margin: auto; }
+    margin: auto;
+    height: auto; }
     .vinilos div {
       width: 45%; } }
 
@@ -175,49 +184,100 @@ footer {
     flex-direction: column; }
     .vinilos div {
       margin: auto;
-      margin-top: 10px;
+      margin-top: 80px;
       height: 30%;
-      width: 90%; } }
+      width: 60%; } }
 
-.tocadiscos-flex {
+.vinilos_card_boton {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+  .vinilos_card_boton .vinilos_precio {
+    color: green;
+    justify-content: space-between;
+    margin-right: 45px;
+    font-weight: bold; }
+  .vinilos_card_boton .vinilos_botonComprar {
+    font-size: 15px;
+    margin-left: 45px;
+    height: 30px;
+    width: auto;
+    padding-top: 5px;
+    background-color: gray;
+    border-radius: 6px; }
+
+@media (max-width: 450px) {
+  .vinilos div {
+    height: 30%;
+    width: auto; }
+  .vinilos_card_boton .vinilos_botonComprar {
+    margin-left: 0; }
+  .vinilos_card_boton .vinilos_precio {
+    margin-right: 0; } }
+
+@media (min-height: 920px) {
+  .vinilos div {
+    max-height: 25%; } }
+
+.main_tocaDiscos .tocadiscos-flex {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 80%;
-  padding: 5px;
-  border: 2px solid white;
-  border-radius: 10px;
+  padding: 20px;
   margin-top: 30px;
-  margin-left: 60px; }
-  .tocadiscos-flex span {
+  margin-left: 60px;
+  transition: all 0.25s; }
+  .main_tocaDiscos .tocadiscos-flex:hover {
+    transform: translateY(-15px);
+    border: 1px solid white;
+    border-radius: 10px; }
+  .main_tocaDiscos .tocadiscos-flex img {
+    border-radius: 10px;
+    margin-left: 15px; }
+  .main_tocaDiscos .tocadiscos-flex .tocadiscos_texto {
     text-align: center;
     padding: 50px; }
-    .tocadiscos-flex span p {
+    .main_tocaDiscos .tocadiscos-flex .tocadiscos_texto h2 {
+      font-size: 27px; }
+    .main_tocaDiscos .tocadiscos-flex .tocadiscos_texto p {
+      font-size: 18px;
       margin-top: 20px; }
 
 @media (max-width: 900px) {
-  .tocadiscos-flex {
-    flex-direction: column;
-    margin: auto; }
-    .tocadiscos-flex img {
-      height: 50%;
-      width: 50%; } }
+  .main_tocaDiscos {
+    height: auto; }
+    .main_tocaDiscos .tocadiscos-flex {
+      flex-direction: column;
+      margin: auto;
+      margin-top: 20px; }
+      .main_tocaDiscos .tocadiscos-flex img {
+        height: 50%;
+        width: 50%; } }
 
 @media (max-width: 600px) {
   .tituloVinilos {
     font-size: 50px; }
-  .tocadiscos-flex {
-    margin: auto; }
-    .tocadiscos-flex span {
+  .main_tocaDiscos .tocadiscos-flex {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+    border: none; }
+    .main_tocaDiscos .tocadiscos-flex span {
       padding: 10px; }
-      .tocadiscos-flex span h2 {
+      .main_tocaDiscos .tocadiscos-flex span h2 {
         font-size: 20px; }
-      .tocadiscos-flex span p {
+      .main_tocaDiscos .tocadiscos-flex span p {
         font-size: 14px; } }
 
 @media (max-width: 400px) {
   .tituloVinilos {
-    font-size: 40px; } }
+    font-size: 40px; }
+  .tocadiscos-flex {
+    width: 100%;
+    margin: 0; } }
 
 @media (max-width: 320px) {
   .tituloVinilos {
@@ -227,22 +287,28 @@ footer {
   display: flex;
   margin-top: 10px; }
   .main img {
-    margin: auto; }
+    margin: auto;
+    width: auto; }
   .main div {
     margin: auto;
     width: 40%;
     text-align: center; }
     .main div h2 {
-      padding: 10px 0px; }
+      padding: 10px 0px;
+      font-size: 27px; }
     .main div p {
       text-align: center;
       width: 90%;
-      margin: auto; }
+      margin: auto;
+      font-size: 18px; }
 
 .mapa {
   display: flex;
   margin: 50px;
-  height: 600px; }
+  height: auto;
+  margin-top: 50px; }
+  .mapa iframe {
+    width: 52%; }
   .mapa p {
     width: 30%;
     text-align: center;
@@ -252,11 +318,14 @@ footer {
       font-weight: bold;
       font-size: 25px; }
 
-@media (max-width: 950px) {
+@media (max-width: 1500px) {
   .main {
-    flex-direction: column; }
+    flex-direction: column;
+    height: auto; }
     .main div {
-      width: 100%; }
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px; }
       .main div h2 {
         font-size: 40px; }
       .main div p {
@@ -264,27 +333,43 @@ footer {
   .mapa {
     flex-direction: column-reverse;
     width: 100%;
-    margin: 50px 0 50px 0; }
+    margin: 20px 0 50px 0; }
     .mapa iframe {
       margin: auto; }
     .mapa p {
       height: auto;
-      width: 100%;
-      margin-bottom: 50px; }
+      width: 98%;
+      margin-top: 60px;
+      margin-bottom: 50px;
+      margin-left: 0; }
       .mapa p span {
         font-weight: bold;
         font-size: 25px; } }
 
+@media (max-width: 800px) {
+  .main img {
+    height: auto;
+    width: 100%;
+    margin: auto; }
+  .main div {
+    margin: 20px auto 20px auto; }
+  .mapa iframe {
+    width: 100%; } }
+
 .formulario {
+  height: 100vh;
   width: 80%;
-  margin: 30px auto;
-  border-radius: 10px;
-  border: 1px solid white; }
+  margin: auto; }
   .formulario form {
+    height: auto;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 20px; }
+    border: 1px solid white;
+    border-radius: 10px; }
     .formulario form .input-1 {
       height: 40px;
       width: 30%;

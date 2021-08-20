@@ -1,13 +1,15 @@
 .formulario {
-    width: 80%;
-    margin:30px auto;
-    border-radius: 10px;
-    border: 1px solid white;
+    @include sizes (80%, 100vh);
+    margin: auto;
     form {
+        @include sizes (90%, auto);
+        margin: auto;
+        padding: 20px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding: 20px;
+        border: 1px solid white;
+        border-radius: 10px;
 
         .input-1 {
             @include sizes(30%, 40px);

@@ -1,8 +1,7 @@
 .presentacion {
+    @include sizes (100%, 100%);
     display: flex;
     flex-flow: column nowrap;
-    height: 480px;
-    justify-content: center;
     align-items: center;
     color: white;
     font-weight: bold;
@@ -12,6 +11,9 @@
     background-repeat: no-repeat;
     background-position: 50% 5%;
 
+    h1 {
+        margin-top: 180px;
+    }
 
     p{
         margin-top: 10px;

@@ -1,30 +1,29 @@
 .tituloVinilos {
     font-family: 'Bebas Neue', cursive;
     font-size: 58px;
-    margin: 100px 0px 90px 70px;
+    margin: 80px 0px 90px 70px;
 }
 
 .vinilos {
-    width: 99%;
+    @include sizes (99%, 100vh);
     display: flex;
     flex-wrap: wrap;
-    margin-left: 10px;
-    margin-top: 50px;
 
     div {
-        @include sizes (23%, 30%);
+        @include sizes (23%, auto);
         margin: 10px;
         text-align: center;
-        padding: 5px;
+        padding-top: 25px;
+        transition: all 0.25s;
 
         p {
             margin-top: 10px;
             font-weight: bold;
         }
-
         &:hover {
-            border: 2px solid white;
-            border-radius: 10px;
+            transform: translateY(-15px);
+            border: 1px solid white;
+            border-radius: 5px;
         }
     }
 }
@@ -35,6 +34,7 @@
     }
     .vinilos{ 
         margin: auto;
+        height: auto;
 
         div {
             width: 45%;
@@ -51,8 +51,56 @@
         flex-direction: column;
         div {
             margin: auto;
-            margin-top: 10px;
-            @include sizes (90%, 30%)
+            margin-top: 80px;
+            @include sizes (60%, 30%)
         }
     }
 }
+
+.vinilos_card_boton {
+    display: flex;
+    justify-content: space-between;
+    margin-top:15px;
+    margin-bottom: 15px;
+
+    .vinilos_precio {
+        color: green;
+        justify-content: space-between;
+        margin-right: 45px;
+        font-weight: bold;
+    }
+
+    .vinilos_botonComprar {
+        font-size: 15px;
+        margin-left: 45px;
+        @include sizes (auto, 30px);
+        padding-top: 5px;
+        background-color: gray;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width:450px) {
+    .vinilos {
+        div {
+            @include sizes (auto, 30%);
+        }
+    }
+    .vinilos_card_boton {
+        .vinilos_botonComprar {
+            margin-left: 0;
+        }
+        .vinilos_precio {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (min-height:920px) {
+    .vinilos {
+        div {
+            max-height: 25%;
+        }
+    }
+}
+
