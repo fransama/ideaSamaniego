@@ -210,7 +210,7 @@ footer {
 @media (max-width: 450px) {
   .vinilos div {
     height: 30%;
-    width: auto; }
+    width: 70%; }
   .vinilos_card_boton .vinilos_botonComprar {
     margin-left: 0; }
   .vinilos_card_boton .vinilos_precio {

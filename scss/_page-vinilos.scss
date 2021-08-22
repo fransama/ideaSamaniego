@@ -83,7 +83,7 @@
 @media (max-width:450px) {
     .vinilos {
         div {
-            @include sizes (auto, 30%);
+            @include sizes (70%, 30%);
         }
     }
     .vinilos_card_boton {
